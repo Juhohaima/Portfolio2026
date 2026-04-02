@@ -1,0 +1,133 @@
+.hero-container {
+  height: 80vh;
+  display: flex;
+  align-items: center; /* Keskitys */
+  justify-content: flex-start;
+  padding-left: 12%; /* Siirtää sisältöä vasemmalle. Mitä pienempi, sitä enemmän vasemmalle */
+}
+
+.hero-content {
+  width: 90%;
+  max-width: 1200px; /* Pidemmän tekstin maksimileveys */
+  color: white; /* "Hei olen Juho!" tekstin väri */
+}
+
+/* "Tervetuloa portfoliooni!" teksti */
+.hero-intro {
+  display: block;
+  font-size: 1.2rem; /* fonttikoko */
+  font-weight: 500; /* fontin paksuus */
+  letter-spacing: 2px; /* kirjainväli */
+  margin-bottom: 0.5rem; /* Tilaa alempana olevaan tekstiin */
+  
+  /* "Tervetuloa Portfoliooni" tekstin efekti  */
+  background: linear-gradient(
+    to right, 
+    #00abf0 0%, 
+    #ffffff 25%, 
+    #00abf0 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+    /* Efekti osio päättyy */
+
+.hero-main-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Väli nimen ja ikonien välillä */
+  flex-shrink: 0;
+}
+
+/* "Hei olen Juho!" teksti */
+.hero-content h1 {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 4rem; /* fonttikoko */
+  font-weight: 400; /* fontin paksuus */
+  line-height: 1.1;
+  margin: 0 !important;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #00abf0;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+ /* Hover efekti linkkeihin */
+.social-icon:hover {
+  background-color: #00abf0;
+  color: #161515;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 171, 240, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 610px;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* Responsiivisuus */
+
+/* Tabletit ja pienet läppärit */
+@media (max-width: 1100px) {
+  .hero-main-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .hero-content p {
+    max-width: 100%;
+  }
+}
+
+/* Puhelimet */
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 5%;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-socials {
+    flex-wrap: wrap; /* Ikonit rivittyvät jos eivät mahdu */
+  }
+}

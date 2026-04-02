@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 0; /* Lisää tilaa yläreunaan */
+    background: transparent; /* Läpinäkyvä tausta */
+    display: flex;
+    justify-content: center; /* kaikki keskelle */
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px; /* fonttikoko */
+    color: #fff; /* linkkien tekstien väri */
+    font-weight: 500; /* fontin paksuus */
+    text-decoration: none;
+    margin: 0 20px; /* säätää miten kaukana linkit ovat toisistaan */
+    transition: .3s; /* hover efektiä */
+}
+
+/* .navbar a:hover {
+    color: #00abf0; */
+     /* hover efekti */
+/* } */
