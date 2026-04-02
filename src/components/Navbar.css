@@ -13,8 +13,8 @@
 
 .navbar a {
     position: relative;
-    font-size: 18px; /* fonttikoko */
-    color: #fff; /* linkkien tekstien väri */
+    font-size: 20px; /* fonttikoko */
+    color: #ffffffa1; /* linkkien tekstien väri */
     font-weight: 500; /* fontin paksuus */
     text-decoration: none;
     margin: 0 20px; /* säätää miten kaukana linkit ovat toisistaan */

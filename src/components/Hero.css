@@ -98,11 +98,33 @@
 .hero-content p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: #cccccc;
+  color: #ffffffa1;
   max-width: 610px;
   margin: 0;
   text-align: left;
   align-self: flex-start;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;   /* Pienennetty leveys, koska ikoni on kapeampi kuin teksti */
+  height: 55px;  /* Korkeus sama kuin leveys -> neliö */
+  background-color: transparent;
+  border: 2px solid #00abf0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem; /* TÄMÄ määrittää ikonin koon laatikon sisällä */
+  border-radius: 12px; /* Pyöristetyt kulmat */
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #00abf0;
+  color: #161515;
+  transform: translateY(-5px); /* Hieman enemmän liikettä */
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.6);
 }
 
 /* Responsiivisuus */
