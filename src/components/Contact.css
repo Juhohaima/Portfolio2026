@@ -1,0 +1,73 @@
+.contact-section {
+  padding: 80px 12%;
+  background-color: #111; /* Hieman eri sävy kuin projektit osiossa */
+  color: white; /* ota yhteyttä tekstin väri */
+  display: flex;
+  justify-content: center; /* teksti keskelle */
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* ota yhteyttä teksti */
+.contact-title {
+  font-size: 3rem; /* fonttikoko */
+  margin-bottom: 0px; /* väli alempana olevaan pieneen tekstiin */
+}
+
+ /* ota yhteyttä alapuolella oleva teksti */
+.contact-subtitle {
+  color: #cccccc; /* tekstin väri */
+  margin-bottom: 40px; /* väliä alapuolella oleviin lomakkeisiin */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #1f1f1f;
+  border: 2px solid #333;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #00abf0; /* Sininen korostus kun klikataan */
+}
+
+.submit-btn {
+  padding: 15px;
+  background-color: #00abf0;
+  color: #161515;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0089c4;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 171, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 5%;
+  }
+}

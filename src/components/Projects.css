@@ -1,3 +1,159 @@
-.projects {
-    background-color: #161515;
+.projects-section {
+  padding: 100px 12%;
+  background-color: #080808; /* Yhdistetään Heron taustaväriin */
+  color: white;
 }
+
+/* Otsikon efekti */
+.projects-title {
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.shine-text {
+  background: linear-gradient(to right, #00abf0 0%, #ffffff 50%, #00abf0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+/* Gridin asettelu */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* Kortin uusi rakenne */
+.project-card {
+  position: relative;
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #00abf0;
+  box-shadow: 0 10px 30px rgba(0, 171, 240, 0.2);
+}
+
+.project-img-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
+}
+
+/* Lasimainen info-laatikko */
+.project-info-box {
+  padding: 20px;
+  background: linear-gradient(to top, #111 80%, rgba(17, 17, 17, 0.8));
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+/* Teknologia-pillerit */
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: rgba(0, 171, 240, 0.1);
+  color: #00abf0;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 171, 240, 0.2);
+}
+
+/* Napit */
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+
+.action-link.demo {
+  background: #00abf0;
+  color: #080808;
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex-grow: 1;
+  text-align: center;
+}
+.action-link.demo:hover {
+  background: #fff;
+  transform: scale(1.02);
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .projects-title { font-size: 2.5rem; }
+  .projects-section { padding: 60px 5%; }
+}
+
+/* Lisää nämä olemassa olevan Projects.css tiedostosi jatkoksi tai korvaa vastaavat kohdat */
+
+.project-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Väli tekstin ja kortin välillä */
+}
+
+.project-top-text {
+  min-height: 60px; /* Pitää gridin suorassa, vaikka tekstien pituus vaihtelee */
+  padding: 0 5px;
+}
+
+.project-top-text p {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  /* Tehdään tekstistä hieman tyylikkäämpi pienellä sivuviivalla */
+  border-left: 2px solid #00abf0;
+  padding-left: 12px;
+}
+
+/* Varmistetaan että grid näyttää hyvältä näiden kanssa */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px; /* Hieman isompi väli, koska nyt on enemmän sisältöä */
+  align-items: flex-start;
+}
+
+/* Pidetään muut aiemmat tyylit (.project-card, .shine-text jne.) ennallaan */

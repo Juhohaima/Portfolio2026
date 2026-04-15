@@ -4,6 +4,8 @@
   align-items: center; /* Keskitys */
   justify-content: flex-start;
   padding-left: 12%; /* Siirtää sisältöä vasemmalle. Mitä pienempi, sitä enemmän vasemmalle */
+  position: relative; /* Lisätty tämä, jotta ikonit pysyvät nurkassa */
+  overflow: hidden; /* Lisätty tämä varmuuden vuoksi */
 }
 
 .hero-content {
@@ -98,7 +100,7 @@
 .hero-content p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: #ffffffa1;
+  color: #ffffff;
   max-width: 610px;
   margin: 0;
   text-align: left;
@@ -109,14 +111,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55px;   /* Pienennetty leveys, koska ikoni on kapeampi kuin teksti */
-  height: 55px;  /* Korkeus sama kuin leveys -> neliö */
+  width: 55px;
+  height: 55px;
   background-color: transparent;
   border: 2px solid #00abf0;
   color: white;
   text-decoration: none;
-  font-size: 1.6rem; /* TÄMÄ määrittää ikonin koon laatikon sisällä */
-  border-radius: 12px; /* Pyöristetyt kulmat */
+  font-size: 1.6rem; /* ikonin koko laatikon sisällä */
+  border-radius: 12px; /* pyöristetyt kulmat */
   transition: all 0.3s ease;
 }
 
@@ -129,7 +131,6 @@
 
 /* Responsiivisuus */
 
-/* Tabletit ja pienet läppärit */
 @media (max-width: 1100px) {
   .hero-main-flex {
     flex-direction: column;
@@ -141,7 +142,6 @@
   }
 }
 
-/* Puhelimet */
 @media (max-width: 768px) {
   .hero-container {
     padding-left: 5%;
@@ -151,5 +151,28 @@
   }
   .hero-socials {
     flex-wrap: wrap; /* Ikonit rivittyvät jos eivät mahdu */
+  }
+}
+
+.tech-stack-corner {
+  position: absolute;
+  bottom: 30px;
+  right: 5%;
+  display: flex;
+  gap: 20px;
+}
+
+.tech-lang {
+  font-size: 2.8rem;
+}
+
+.html { color: #e34f26; }
+.css { color: #1572b6; }
+.js { color: #f7df1e; }
+.react { color: #61dafb; }
+
+@media (max-width: 768px) {
+  .tech-stack-corner {
+    display: none; 
   }
 }

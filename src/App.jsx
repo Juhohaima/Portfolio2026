@@ -1,15 +1,15 @@
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
+import ContactForm from "./components/Contact";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Hero />
-      {/* <Projects /> */}
-      <Footer />
+      <Projects />
+      <ContactForm />
     </div>
   );
 }
