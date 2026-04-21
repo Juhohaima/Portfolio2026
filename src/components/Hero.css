@@ -1,178 +1,173 @@
+/* --- PERUSASETUKSET --- */
 .hero-container {
-  height: 80vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center; /* Keskitys */
+  align-items: center;
   justify-content: flex-start;
-  padding-left: 12%; /* Siirtää sisältöä vasemmalle. Mitä pienempi, sitä enemmän vasemmalle */
-  position: relative; /* Lisätty tämä, jotta ikonit pysyvät nurkassa */
-  overflow: hidden; /* Lisätty tämä varmuuden vuoksi */
+  padding: 0 12%;
+  position: relative;
+  overflow: hidden;
+  background-color: #080808;
 }
 
+/* TAUSTAEFEKTIT */
+.hero-grid-pattern {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(rgba(0, 171, 240, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+.hero-bg-glow-1, .hero-bg-glow-2 {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 0;
+  opacity: 0.15;
+}
+.hero-bg-glow-1 { background: #00abf0; top: -100px; right: -50px; }
+.hero-bg-glow-2 { background: #0071a1; bottom: -150px; left: -50px; }
+
+/* --- SISÄLTÖ --- */
 .hero-content {
-  width: 90%;
-  max-width: 1200px; /* Pidemmän tekstin maksimileveys */
-  color: white; /* "Hei olen Juho!" tekstin väri */
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* "Tervetuloa portfoliooni!" teksti */
 .hero-intro {
   display: block;
-  font-size: 1.2rem; /* fonttikoko */
-  font-weight: 500; /* fontin paksuus */
-  letter-spacing: 2px; /* kirjainväli */
-  margin-bottom: 0.5rem; /* Tilaa alempana olevaan tekstiin */
-  
-  /* "Tervetuloa Portfoliooni" tekstin efekti  */
-  background: linear-gradient(
-    to right, 
-    #00abf0 0%, 
-    #ffffff 25%, 
-    #00abf0 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #00abf0;
 }
-
-@keyframes shine {
-  to { background-position: 200% center; }
-}
-
-    /* Efekti osio päättyy */
 
 .hero-main-flex {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 60px;
-  margin-top: 20px;
+  gap: 50px;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Väli nimen ja ikonien välillä */
-  flex-shrink: 0;
+  gap: 25px;
 }
 
-/* "Hei olen Juho!" teksti */
-.hero-content h1 {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 4rem; /* fonttikoko */
-  font-weight: 400; /* fontin paksuus */
-  line-height: 1.1;
-  margin: 0 !important;
-  white-space: nowrap;
-  letter-spacing: -0.02em;
-}
-
+/* Some-ikonit */
 .hero-socials {
   display: flex;
   gap: 15px;
 }
 
 .social-icon {
-  display: flex;
+  display: flex; align-items: center; justify-content: center;
+  width: 55px; height: 55px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 171, 240, 0.3);
+  color: white; font-size: 1.5rem;
+  border-radius: 12px; transition: 0.3s;
+}
+
+/* CV-nappi */
+.cv-button {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 45px;
-  background-color: transparent;
-  border: 2px solid #00abf0;
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
- /* Hover efekti linkkeihin */
-.social-icon:hover {
-  background-color: #00abf0;
+  gap: 10px;
+  background: linear-gradient(45deg, #00abf0, #00d4ff);
   color: #161515;
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0, 171, 240, 0.5);
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
 }
 
-.hero-content p {
-  font-size: 1.5rem;
+/* Kuvausteksti */
+.hero-description {
+  font-size: 1.3rem;
   line-height: 1.6;
-  color: #ffffff;
-  max-width: 610px;
-  margin: 0;
-  text-align: left;
-  align-self: flex-start;
+  color: #eeeeee;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 55px;
-  height: 55px;
-  background-color: transparent;
-  border: 2px solid #00abf0;
-  color: white;
-  text-decoration: none;
-  font-size: 1.6rem; /* ikonin koko laatikon sisällä */
-  border-radius: 12px; /* pyöristetyt kulmat */
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: #00abf0;
-  color: #161515;
-  transform: translateY(-5px); /* Hieman enemmän liikettä */
-  box-shadow: 0 0 20px rgba(0, 171, 240, 0.6);
-}
-
-/* Responsiivisuus */
-
-@media (max-width: 1100px) {
-  .hero-main-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-  .hero-content p {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-container {
-    padding-left: 5%;
-  }
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  .hero-socials {
-    flex-wrap: wrap; /* Ikonit rivittyvät jos eivät mahdu */
-  }
-}
-
+/* Teknologiat (Desktop) */
 .tech-stack-corner {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   right: 5%;
   display: flex;
   gap: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.tech-lang {
-  font-size: 2.8rem;
-}
+.tech-lang { font-size: 2rem; }
+.html { color: #e34f26; } .css { color: #1572b6; } .js { color: #f7df1e; } .react { color: #61dafb; } .tailwind { color: #38bdf8; }
 
-.html { color: #e34f26; }
-.css { color: #1572b6; }
-.js { color: #f7df1e; }
-.react { color: #61dafb; }
+/* --- MOBIILIKORJAUKSET (TÄRKEÄ) --- */
 
-@media (max-width: 768px) {
-  .tech-stack-corner {
-    display: none; 
+@media (max-width: 900px) {
+  .hero-container {
+    padding: 100px 20px;
+    height: auto;
+    display: block; /* Poistetaan flex, jotta asiat pinoutuvat luonnollisesti */
   }
+
+  .hero-main-flex {
+    flex-direction: column;
+    align-items: flex-start; /* Pidetään teksti vasemmassa laidassa kuten kuvassa */
+    gap: 30px;
+  }
+
+  /* PIENENNETÄÄN NIMI */
+  .hero-name-text {
+    font-size: 2.5rem !important; /* Huomattavasti pienempi mobiilissa */
+    line-height: 1.2;
+  }
+
+  .hero-intro { font-size: 1rem; }
+
+  /* SOME JA CV */
+  .hero-socials { gap: 10px; }
+  .social-icon { width: 45px; height: 45px; font-size: 1.2rem; }
+  .cv-button { padding: 12px 20px; font-size: 1rem; }
+
+  .hero-description {
+    font-size: 1.1rem;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  /* TEKNOLOGIAPILLERI MOBIILISSA */
+  .tech-stack-corner {
+    position: relative; /* Ei enää kellu nimen päällä */
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    display: inline-flex; /* Vie vain tarvittavan tilan */
+    padding: 10px 15px;
+    gap: 12px;
+  }
+  
+  .tech-lang { font-size: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-name-text { font-size: 2.2rem !important; }
 }

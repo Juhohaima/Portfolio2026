@@ -1,27 +1,58 @@
 .contact-section {
-  padding: 80px 12%;
-  background-color: #111; /* Hieman eri sävy kuin projektit osiossa */
-  color: white; /* ota yhteyttä tekstin väri */
+  padding: 120px 12%;
+  position: relative;
+  /* Syvä, tumma liukuväri joka tuo syvyyttä */
+  background: radial-gradient(circle at 50% 50%, #111b27 0%, #080808 100%);
   display: flex;
-  justify-content: center; /* teksti keskelle */
+  justify-content: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 171, 240, 0.2);
+}
+
+/* Taustalla hehkuva sininen valopallo */
+.contact-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: #00abf0;
+  filter: blur(150px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .contact-container {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
+}
+
+/* "Lasi"-laatikko lomakkeen ympärillä */
+.contact-content-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-/* ota yhteyttä teksti */
-.contact-title {
-  font-size: 3rem; /* fonttikoko */
-  margin-bottom: 0px; /* väli alempana olevaan pieneen tekstiin */
-}
-
- /* ota yhteyttä alapuolella oleva teksti */
 .contact-subtitle {
-  color: #cccccc; /* tekstin väri */
-  margin-bottom: 40px; /* väliä alapuolella oleviin lomakkeisiin */
+  color: #aaaaaa;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .contact-form {
@@ -30,44 +61,60 @@
   gap: 20px;
 }
 
+/* Kenttien tyyli */
 .form-group input, 
 .form-group textarea {
   width: 100%;
-  padding: 15px;
-  background-color: #1f1f1f;
-  border: 2px solid #333;
-  border-radius: 10px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 171, 240, 0.2);
+  border-radius: 15px;
   color: white;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  resize: none;
 }
 
 .form-group input:focus, 
 .form-group textarea:focus {
-  border-color: #00abf0; /* Sininen korostus kun klikataan */
+  border-color: #00abf0;
+  background: rgba(0, 171, 240, 0.05);
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);
 }
 
+/* Lähetä-nappi */
 .submit-btn {
-  padding: 15px;
-  background-color: #00abf0;
-  color: #161515;
+  padding: 18px;
+  background: linear-gradient(45deg, #00abf0, #00d4ff);
+  color: #080808;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
-  background-color: #0089c4;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 171, 240, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 171, 240, 0.4);
+  background: #ffffff;
+  color: #00abf0;
 }
 
+/* Responsiivisuus */
 @media (max-width: 768px) {
   .contact-section {
-    padding: 60px 5%;
+    padding: 80px 5%;
+  }
+  .contact-content-wrapper {
+    padding: 30px 20px;
+  }
+  .contact-title {
+    font-size: 2.5rem;
   }
 }

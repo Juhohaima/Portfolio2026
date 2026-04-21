@@ -1,52 +1,72 @@
 import React from 'react';
+import SplitText from "./SplitText";
 import "./Hero.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faHtml5, faCss3Alt, faJs, faReact, } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faHtml5, faCss3Alt, faJs, faReact, faTailwindCss } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
     <section className="hero-container">
+      {/* TAUSTAELEMENTIT */}
+      <div className="hero-bg-glow-1"></div>
+      <div className="hero-bg-glow-2"></div>
+      <div className="hero-grid-pattern"></div>
+
       <div className="hero-content">
-        {/* animoitu teksti */}
         <span className="hero-intro">Tervetuloa portfoliooni!</span>
 
         <div className="hero-main-flex">
           <div className="hero-left">
-            <h1>Hei olen Juho!</h1>
+            <SplitText
+              text="Hei olen Juho!"
+              className="hero-name-text !text-6xl" /* Isompi koko tässä */
+              delay={120}
+              duration={0.8}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 60 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="left"
+            />
             
+            {/* Some-ikonit */}
             <div className="hero-socials">
-             
-              <a href="/Juho_Haimakainen_CV.pdf" download className="social-icon" aria-label="Lataa CV">
-                <FontAwesomeIcon icon={faFile} />
-              </a>
-
-              <a href="https://www.linkedin.com/in/juho-haimakainen-25470a381/" target="_blank" className="social-icon" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/juho-haimakainen-25470a381/" target="_blank" rel="noreferrer" className="social-icon" aria-label="LinkedIn">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="https://github.com/Juhohaima" target="_blank" className="social-icon" aria-label="GitHub">
+
+              <a href="https://github.com/Juhohaima" target="_blank" rel="noreferrer" className="social-icon" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="mailto:juhohaima@gmail.com" target="_blank" className="social-icon" aria-label="Gmail">
+
+              <a href="mailto:juhohaima@gmail.com" target="_blank" rel="noreferrer" className="social-icon" aria-label="Gmail">
                 <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </div>
+
+            {/* CV-nappi */}
+            <div className="hero-actions">
+              <a href="/Juho_Haimakainen_CV.pdf" download className="cv-button">
+                <FontAwesomeIcon icon={faFile} /> Lataa CV
               </a>
             </div>
           </div>
 
-
-          <p>
-            {/* oikean puoleinen pitempi teksti */}
-            Olen 17-vuotias opiskelija Oulusta. Opiskelen OSAO:lla Tieto- ja Viestintätekniikan perustutkintoa, ja tulen valmistumaan ohjelmistokehittäjäksi 2027
+          <p className="hero-description">
+            Olen 17-vuotias opiskelija Oulusta. Opiskelen OSAO:lla Tieto- ja Viestintätekniikan perustutkintoa, ja tulen valmistumaan ohjelmistokehittäjäksi 2027.
           </p>
         </div>
       </div>
 
-      {/* TÄMÄ ON UUSI LISÄYS: Ikonit nurkassa */}
       <div className="tech-stack-corner">
         <FontAwesomeIcon icon={faHtml5} className="tech-lang html" />
         <FontAwesomeIcon icon={faCss3Alt} className="tech-lang css" />
         <FontAwesomeIcon icon={faJs} className="tech-lang js" />
         <FontAwesomeIcon icon={faReact} className="tech-lang react" />
+        <FontAwesomeIcon icon={faTailwindCss} className="tech-lang tailwind" />
       </div>
     </section>
   );

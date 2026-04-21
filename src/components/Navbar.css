@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: fixed; /* sticky header aina näkyvissä  */
     top: 0;
     left: 0;
     width: 100%;
@@ -10,9 +10,9 @@
     display: flex;
     justify-content: center; /* linkit keskelle */ 
     align-items: center;
-    padding: 20px 10%;
-    background: rgba(22, 21, 21, 0.8);
-    backdrop-filter: blur(12px);
+    padding: 20px 10%; /* yläpalkin paksuus */
+    background: rgba(22, 21, 21, 0.8); /* taustaväri */
+    backdrop-filter: blur(12px); /* lasiefekti */
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ohut ulkoreuna nav barin alaosassa */
 }
@@ -20,21 +20,24 @@
 
 .nav-links {
     display: flex;
-    gap: 45px;
+    gap: 45px; /* väli linkkien välillä */
 }
 
+/* linkkien tekstit */
 .nav-links a {
-    color: white;
+    color: white; /* tekstiväri */
     text-decoration: none;
-    font-size: 19px;
-    font-weight: 500;
-    transition: 0.3s;
+    font-size: 19px; /* fonttikoko */
+    transition: 0.3s; /* animaation kesto kun hoveraa */
+    font-weight: bold;
 }
 
+/* hover väri */
 .nav-links a:hover {
     color: #00abf0;
 }
 
+/* mobiilimenu ja sen asetukset */
 .hamburger {
     display: none;
     background: none;
@@ -68,7 +71,7 @@
     }
 
     .nav-links.active {
-        right: 0; /* Liukuu sisään kun active-luokka on päällä */
+        right: 0;
     }
 
     .nav-links a {

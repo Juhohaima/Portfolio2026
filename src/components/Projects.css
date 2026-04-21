@@ -1,6 +1,6 @@
 .projects-section {
   padding: 100px 12%;
-  background-color: #080808; /* Yhdistetään Heron taustaväriin */
+  background-color: #111; /* Yhdistetään Heron taustaväriin. Ennen: #080808 */
   color: white;
 }
 

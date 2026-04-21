@@ -31,7 +31,7 @@ const Navbar = () => {
                 });
             }
         }
-        setIsOpen(false); // Sulkee mobiilivalikon
+        setIsOpen(false);
     };
 
     return (
@@ -39,7 +39,6 @@ const Navbar = () => {
             <nav className="navbar">
                
                 <div className={`nav-links ${isOpen ? "active" : ""}`}>
-                    {/* Käytetään handleScroll-funktiota hrefin sijaan */}
                     <a href="#" onClick={(e) => handleScroll(e, "home")}>Koti</a>
                     <a href="#projects" onClick={(e) => handleScroll(e, "projects")}>Projektit</a>
                     <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>Yhteydenotto</a>

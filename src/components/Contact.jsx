@@ -12,64 +12,67 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Jos käytät FormSubmitia suoraan 'action'-attribuutilla, 
-  // emme käytä e.preventDefaultia, jotta sivu voi ohjautua FormSubmitin kiitossivulle.
-  // Jos haluat käsitellä lähetyksen täysin Reactilla (ilman sivun latausta), se vaatisi 'fetch'-kutsun.
   const handleSubmit = () => {
     console.log("Lomake lähetetään FormSubmitiin...");
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
+      {/* Tämä elementti luo hienon valoefektin taustalle */}
+      <div className="contact-glow"></div>
+
       <div className="contact-container">
-        <h2 className="contact-title shine-text">Yhteydenotto</h2>
-        <p className="contact-subtitle">Jätä yhteystietosi ja viestisi!</p>
-        
-        {/* LISÄTTY action JA method TÄHÄN LOMAKKEESEEN */}
-        <form 
-          className="contact-form" 
-          action="https://formsubmit.co/juhohaima@gmail.com" 
-          method="POST"
-          onSubmit={handleSubmit}
-        >
-          {/* FormSubmit tarvitsee nämä nimeämiset (name="name" jne.), jotka sinulla onkin jo kunnossa */}
-          <div className="form-group">
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Nimi" 
-              value={formData.name}
-              onChange={handleChange}
-              required 
-            />
-          </div>
-          <div className="form-group">
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Sähköposti" 
-              value={formData.email}
-              onChange={handleChange}
-              required 
-            />
-          </div>
-          <div className="form-group">
-            <textarea 
-              name="message" 
-              placeholder="Viesti..." 
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
+        <div className="contact-content-wrapper">
+          <h2 className="contact-title shine-text">Ota yhteyttä</h2>
+          <p className="contact-subtitle">
+            Ota yhteyttä alla olevalla lomakkeella, tai laita minulle suoraan sähköpostia osoitteeseen: juhohaima@gmail.com.
+          </p>
+          
+          <form 
+            className="contact-form" 
+            action="https://formsubmit.co/juhohaima@gmail.com" 
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <div className="form-group">
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Nimesi" 
+                value={formData.name}
+                onChange={handleChange}
+                required 
+              />
+            </div>
+            <div className="form-group">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Sähköpostiosoitteesi" 
+                value={formData.email}
+                onChange={handleChange}
+                required 
+              />
+            </div>
+            <div className="form-group">
+              <textarea 
+                name="message" 
+                placeholder="Kirjoita viestisi tähän..." 
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
 
-          {/* Voit lisätä halutessasi spämmisuojan ja hienosäätöjä: */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="Uusi viesti portfoliosta!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Uusi viesti portfoliosta!" />
 
-          <button type="submit" className="submit-btn">Lähetä viesti</button>
-        </form>
+            <button type="submit" className="submit-btn">
+              Lähetä viesti
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
