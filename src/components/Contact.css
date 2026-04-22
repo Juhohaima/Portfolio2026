@@ -1,15 +1,14 @@
 .contact-section {
   padding: 120px 12%;
   position: relative;
-  /* Syvä, tumma liukuväri joka tuo syvyyttä */
-  background: radial-gradient(circle at 50% 50%, #111b27 0%, #080808 100%);
+  background: radial-gradient(circle at 50% 50%, #111b27 0%, #080808 100%); /* tumma tausta jossa hieman väriä */
   display: flex;
   justify-content: center;
   overflow: hidden;
-  border-top: 1px solid rgba(0, 171, 240, 0.2);
+  border-top: 1px solid rgba(0, 171, 240, 0.2); /* tosi ohut viiva Contact.jsx osion aivan ylhäällä */
 }
 
-/* Taustalla hehkuva sininen valopallo */
+/* Google Gemini Ai:n tekemä; taustalla hehkuva sininen valopallo efekti */
 .contact-glow {
   position: absolute;
   top: 50%;
@@ -31,7 +30,7 @@
   max-width: 700px;
 }
 
-/* "Lasi"-laatikko lomakkeen ympärillä */
+/* lasi efektinen laatikko lomakkeen ympärillä */
 .contact-content-wrapper {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
@@ -41,20 +40,23 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
+/* "ota yhteyttä" otsikko */
 .contact-title {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-  text-align: center;
+  font-size: 3.5rem; /* fonttikoko */
+  margin-bottom: 10px; /* väliä alapuolella olevaan alaotsikkoon */
+  text-align: center; /* keskitetty otsikko */
 }
 
+/* alempana oleva pienempi kuvausotsikko */
 .contact-subtitle {
-  color: #aaaaaa;
-  margin-bottom: 40px;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  color: #aaaaaa; /* tekstinväri */
+  margin-bottom: 40px; /* väliä alapuolella olevaan lomakkeeseen */
+  text-align: center; /* keskitetty teksti */
+  font-size: 1.1rem; /* fonttikoko */
+  line-height: 1.6; /* riviväli */
 }
 
+/* lomake */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -67,12 +69,12 @@
   width: 100%;
   padding: 18px;
   background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(0, 171, 240, 0.2);
-  border-radius: 15px;
-  color: white;
-  font-size: 1rem;
+  border: 1px solid rgba(0, 171, 240, 0.2); /* ohut reuna kentissä */
+  border-radius: 15px; /* pyöristetyt kulmat */
+  color: white; /* placeholder tekstin ja kirjoittevan tekstin väri */
+  font-size: 1rem; /* fonttikoko */
   outline: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* väriefektin kesto kun painaa kirjoittaakseen jotain kenttään */
   resize: none;
 }
 
@@ -83,27 +85,77 @@
   box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);
 }
 
-/* Lähetä-nappi */
+/* lähetä nappi */
 .submit-btn {
-  padding: 18px;
-  background: linear-gradient(45deg, #00abf0, #00d4ff);
-  color: #080808;
-  border: none;
-  border-radius: 15px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-top: 10px;
+  padding: 18px; /* napin paksuus */
+  background: linear-gradient(45deg, #00abf0, #00d4ff); /* napin taustaväri */
+  color: #080808; /* napin tekstin väri */
+  border: none; /* ei reunoja */
+  border-radius: 15px; /* pyöristetyt kulmat */
+  font-size: 1.1rem; /* fonttikoko */
+  font-weight: 800; /* fontin paksuus */
+  text-transform: uppercase; /* capsi teksti */
+  letter-spacing: 1px; /* väliä kirjaimiin */
+  cursor: pointer; /* pointer-kursori */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* hover efekti */
+  margin-top: 10px; /* väliä yläpuolella olevaan tekstikenttään */
 }
 
+/* hover efekti napissas */
 .submit-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 171, 240, 0.4);
-  background: #ffffff;
+}
+
+/* onnistumisviesti */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keskittää vaakasuunnassa */
+  justify-content: center; /* Keskittää pystysuunnassa */
+  text-align: center; /* tekstit keskelle */
+  min-height: 200px;
+}
+
+
+.success-text {
   color: #00abf0;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contact-content-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Varmistetaan, että lomake itsessään täyttää tilan */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; 
+}
+
+/* Keskitetään vain tekstit ja lähetysnappi erikseen */
+.contact-title, 
+.contact-subtitle,
+.success-container {
+  text-align: center;
+  align-self: center; /* Keskittää nämä elementit wrapperin sisällä */
+}
+
+.submit-btn {
+  align-self: center;
+  min-width: 100%; /* napin koko */
 }
 
 /* Responsiivisuus */

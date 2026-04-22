@@ -1,16 +1,17 @@
 .projects-section {
   padding: 100px 12%;
-  background-color: #111; /* Yhdistetään Heron taustaväriin. Ennen: #080808 */
+  background-color: #111; /* sama taustaväri kuin hero osiossa */
   color: white;
 }
 
-/* Otsikon efekti */
+/* otsikon efekti */
 .projects-title {
-  font-size: 3.5rem;
-  margin-bottom: 60px;
-  text-align: center;
+  font-size: 3.5rem; /* fonttikoko */
+  margin-bottom: 60px; /* väliä alla oleviin kortteihin */
+  text-align: center; /* keskitetty otsikko */
 }
 
+/* otsikon efekti */
 .shine-text {
   background: linear-gradient(to right, #00abf0 0%, #ffffff 50%, #00abf0 100%);
   background-size: 200% auto;
@@ -19,29 +20,35 @@
   animation: shine 4s linear infinite;
 }
 
-/* Gridin asettelu */
+/* gridin asettelu */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
+  gap: 50px; /* väliä korttien välillä */
+  align-items: stretch;
 }
 
-/* Kortin uusi rakenne */
+/* Korttien rakenne */
 .project-card {
   position: relative;
-  background: #111;
-  border-radius: 20px;
+  background: #111; /* taustaväri */
+  border-radius: 20px; /* pyöristetyt kulmat */
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* ohut reuna */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* hover efekti */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* hover efekti */
 .project-card:hover {
   transform: translateY(-10px);
-  border-color: #00abf0;
-  box-shadow: 0 10px 30px rgba(0, 171, 240, 0.2);
+  border-color: #00abf0; /* väri korttien reunassa kun hoveraa */
+  box-shadow: 0 10px 30px rgba(0, 171, 240, 0.2); /* varjo hoveratessa */
 }
 
+/* kuvat korteissa */
 .project-img-wrapper {
   width: 100%;
   height: 220px;
@@ -52,45 +59,52 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease; /* zoom efekti kun hoveraa */
 }
 
+/* zoomaus efekti hoverissa */
 .project-card:hover .project-img {
   transform: scale(1.1);
 }
 
-/* Lasimainen info-laatikko */
+/* info laatikkojen tausta */
 .project-info-box {
   padding: 20px;
   background: linear-gradient(to top, #111 80%, rgba(17, 17, 17, 0.8));
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* projektin otsikko. "musiikkitapahtuma", "Op pankkilomake" jne */
 .project-header h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #fff;
+  font-size: 1.4rem; /* fonttikoko */
+  margin-bottom: 12px; /* väliä alla oleviin käytettyihin ohjelmointikieliteksteihin */
+  color: #fff; /* otsikon väri */
 }
 
-/* Teknologia-pillerit */
+/* ohjelmointikieli tekstit */
 .project-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 8px; /* väliä ohjelmointikieli teksteissä */
+  margin-bottom: 20px; /* väliä alla olevaan nappiin */
 }
 
+/* pienet ohjelmointikieli "pillerit" */
 .tech-tag {
-  background: rgba(0, 171, 240, 0.1);
-  color: #00abf0;
+  background: rgba(0, 171, 240, 0.1); /* taustaväri */
+  color: #00abf0; /* tekstin väri */
   padding: 4px 12px;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid rgba(0, 171, 240, 0.2);
+  border-radius: 100px; /* pyöristetyt kulmat */
+  font-size: 0.75rem; /* fonttikoko */
+  font-weight: 600; /* fontin paksuus */
+  border: 1px solid rgba(0, 171, 240, 0.2); /* ohut reuna */
 }
 
-/* Napit */
+/* vieraile sivustolla nappi sijoittaminen */
 .project-actions {
   display: flex;
   justify-content: space-between;
@@ -98,25 +112,22 @@
   gap: 10px;
 }
 
+/* vieraile sivustolla nappien tyylitykset */
 .action-link {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
+  font-weight: 600; /* fontin paksuus */
+  font-size: 0.85rem; /* fonttikoko */
+  transition: all 0.3s ease; /* hover efekti */
 }
 
-
+/* nappien tyylit */
 .action-link.demo {
-  background: #00abf0;
-  color: #080808;
+  background: #00abf0; /* nappien väri */
+  color: #080808; /* tekstin väri napeissa */
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 10px; /* pyöristetyt kulmat */
   flex-grow: 1;
-  text-align: center;
-}
-.action-link.demo:hover {
-  background: #fff;
-  transform: scale(1.02);
+  text-align: center; /* teksti keskelle nappia */
 }
 
 /* Responsiivisuus */
@@ -125,16 +136,15 @@
   .projects-section { padding: 60px 5%; }
 }
 
-/* Lisää nämä olemassa olevan Projects.css tiedostosi jatkoksi tai korvaa vastaavat kohdat */
-
 .project-item-wrapper {
   display: flex;
   flex-direction: column;
   gap: 15px; /* Väli tekstin ja kortin välillä */
+  height: 100%;
 }
 
 .project-top-text {
-  min-height: 60px; /* Pitää gridin suorassa, vaikka tekstien pituus vaihtelee */
+  min-height: 120px; /* Pitää gridin suorassa, vaikka tekstien pituus vaihtelee */
   padding: 0 5px;
 }
 
@@ -156,4 +166,33 @@
   align-items: flex-start;
 }
 
-/* Pidetään muut aiemmat tyylit (.project-card, .shine-text jne.) ennallaan */
+/* Lisää tai korvaa nämä Projects.css tiedostossa */
+
+.project-meta-wrapper {
+  display: flex;
+  justify-content: space-between; /* Työntää tagit vasemmalle ja ikonit oikealle */
+  align-items: center; /* Pitää ne samalla korkeudella */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0; /* Poistetaan marginaali, ettei se sotke pystysuuntaista keskitystä */
+}
+
+.github-link-icon {
+  color: #aaaaaa;
+  font-size: 1.8rem; /* Hieman isompi erottuvuuden vuoksi */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding-left: 15px; /* Pieni hajurako tageihin */
+}
+
+.github-link-icon:hover {
+  color: #00abf0;
+  transform: translateY(-2px); /* Pieni noste hoverissa */
+}

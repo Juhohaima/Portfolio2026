@@ -1,5 +1,5 @@
 .header {
-    position: fixed; /* sticky header aina näkyvissä  */
+    position: fixed; /* sticky header eli navbar aina näkyvissä  */
     top: 0;
     left: 0;
     width: 100%;
@@ -17,7 +17,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ohut ulkoreuna nav barin alaosassa */
 }
 
-
+ /* koti, projektit ja yhteydenotto linkit */
 .nav-links {
     display: flex;
     gap: 45px; /* väli linkkien välillä */
@@ -29,7 +29,7 @@
     text-decoration: none;
     font-size: 19px; /* fonttikoko */
     transition: 0.3s; /* animaation kesto kun hoveraa */
-    font-weight: bold;
+    font-weight: bold; /* capsilla teksti */
 }
 
 /* hover väri */
@@ -42,8 +42,8 @@
     display: none;
     background: none;
     border: none;
-    color: white;
-    font-size: 28px;
+    color: white; /* hamburger ikonin väri */
+    font-size: 28px; /* hamburger ikonin koko */
     cursor: pointer;
     z-index: 1001;
 }

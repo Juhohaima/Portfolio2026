@@ -1,4 +1,3 @@
-/* --- PERUSASETUKSET --- */
 .hero-container {
   min-height: 100vh;
   display: flex;
@@ -6,11 +5,11 @@
   justify-content: flex-start;
   padding: 0 12%;
   position: relative;
-  overflow: hidden;
-  background-color: #080808;
+  overflow: hidden; /* alhaalta scrollbar pois */
+  background-color: #080808; /* tumma tausta */
 }
 
-/* TAUSTAEFEKTIT */
+/* väriefekti taustalla */
 .hero-grid-pattern {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -30,7 +29,9 @@
 .hero-bg-glow-1 { background: #00abf0; top: -100px; right: -50px; }
 .hero-bg-glow-2 { background: #0071a1; bottom: -150px; left: -50px; }
 
-/* --- SISÄLTÖ --- */
+/* väriefekti osio päättyy */
+
+/* muu sisältö */
 .hero-content {
   position: relative;
   z-index: 5;
@@ -38,12 +39,13 @@
   max-width: 1200px;
 }
 
+/* "tervetuloa portofolioon" teksti */
 .hero-intro {
   display: block;
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem; /* fonttikoko */
+  font-weight: 500; /* fontin paksuus */
+  letter-spacing: 2px; /* väliä kirjaimiin */
+  margin-bottom: 0.5rem; /* väliä alapuolella olevaan "Hei olen juho" tekstiin */
   color: #00abf0;
 }
 
@@ -55,89 +57,115 @@
   gap: 50px;
 }
 
+/* vasemmalla olevat tekstit ja napit */
 .hero-left {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 25px; /* välit elementtien välillä */
 }
 
-/* Some-ikonit */
+/* some ikonit sijoitus */
 .hero-socials {
   display: flex;
-  gap: 15px;
+  gap: 15px; /* väli ikonien välillä */
 }
 
+/* some ikonien tyylitys */
 .social-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 55px; height: 55px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 171, 240, 0.3);
-  color: white; font-size: 1.5rem;
-  border-radius: 12px; transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px; /* ikonin koko */
+  background-color: rgba(255, 255, 255, 0.05); /* taustaväri */
+  border: 1px solid rgba(0, 171, 240, 0.3); /* ohut sinertävä reuna */
+  color: white;
+  font-size: 1.5rem; /* fonttikoko ja väri */
+  border-radius: 12px;
+  transition: 0.3s; /* pyöristetyt kulmat ja hover efekti */
+  cursor: pointer;
 }
 
-/* CV-nappi */
+/* hover efektit ikoneille */
+.social-icon:hover {
+  background-color: rgba(0, 171, 240, 0.1);
+  border-color: #00abf0; /* sininen reuna */
+  color: #00abf0; /* ikoni muuttuu siniseksi */
+  transform: translateY(-5px); /* nousee hieman ylös */
+  box-shadow: 0 5px 15px rgba(0, 171, 240, 0.3); /* hohto alapuolella */
+}
+
+/* lataa cv nappi */
 .cv-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(45deg, #00abf0, #00d4ff);
-  color: #161515;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  gap: 10px; /* väli ikoniin ja tekstiin */
+  background: linear-gradient(45deg, #00abf0, #00d4ff); /* napin väri */
+  color: #161515; /* tekstin väri */
+  padding: 14px 28px; /* napin koko */
+  border-radius: 10px; /* pyöristetyt kulmat */
+  font-size: 1.1rem; /* fonttikoko */
+  font-weight: 700; /* fontin paksuus */
   text-decoration: none;
-  width: fit-content;
+  width: fit-content; /* napin leveys mukautuu sisällön mukaan */
 }
 
-/* Kuvausteksti */
+/* lataa cv napin hover efekti */
+.cv-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 171, 240, 0.4);
+  filter: brightness(1.1); /* kirkastaa nappia hieman */
+}
+
+/* pitempi teksti oikealla puolella */
 .hero-description {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: #eeeeee;
+  font-size: 1.3rem; /* fonttikoko */
+  line-height: 1.6; /* riviväli */
+  color: #eeeeee; /* tekstin väri */
   max-width: 500px;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 25px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04); /* taustaväri */
+  padding: 25px; /* paddingia reunoihin */
+  border-radius: 20px; /* pyöristetyt kulmat */
+  backdrop-filter: blur(10px); /* blur efekti */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* ohut reuna */
 }
 
-/* Teknologiat (Desktop) */
+/* teknonurkka oikeassa alanurkassa */
 .tech-stack-corner {
   position: absolute;
-  bottom: 40px;
-  right: 5%;
+  bottom: 40px; /* väliä alareunaan */
+  right: 5%; /* väliä oikeaan reunaan */
   display: flex;
-  gap: 20px;
-  background: rgba(0, 0, 0, 0.4);
+  gap: 20px; /* väli ikonien välillä */
+  background: rgba(0, 0, 0, 0.4); /* tumma tausta ikonien takana */
   padding: 12px 20px;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* ohut reuna */
 }
 
-.tech-lang { font-size: 2rem; }
+/* ikonien tyylitystä */
+.tech-lang { font-size: 2rem; } /* ikonin koko */
+
+/* Ikoneille omat värit */
 .html { color: #e34f26; } .css { color: #1572b6; } .js { color: #f7df1e; } .react { color: #61dafb; } .tailwind { color: #38bdf8; }
 
-/* --- MOBIILIKORJAUKSET (TÄRKEÄ) --- */
+/* Responsiivisuutta */
 
 @media (max-width: 900px) {
   .hero-container {
     padding: 100px 20px;
     height: auto;
-    display: block; /* Poistetaan flex, jotta asiat pinoutuvat luonnollisesti */
+    display: block;
   }
 
   .hero-main-flex {
     flex-direction: column;
-    align-items: flex-start; /* Pidetään teksti vasemmassa laidassa kuten kuvassa */
+    align-items: flex-start;
     gap: 30px;
   }
 
-  /* PIENENNETÄÄN NIMI */
   .hero-name-text {
-    font-size: 2.5rem !important; /* Huomattavasti pienempi mobiilissa */
+    font-size: 2.5rem !important; /* fonttikoko pienempi mobiilissa */
     line-height: 1.2;
   }
 
@@ -154,13 +182,13 @@
     max-width: 100%;
   }
 
-  /* TEKNOLOGIAPILLERI MOBIILISSA */
+  /* ikonit oikealla alareunassa */
   .tech-stack-corner {
-    position: relative; /* Ei enää kellu nimen päällä */
+    position: relative;
     bottom: auto;
     right: auto;
     margin-top: 20px;
-    display: inline-flex; /* Vie vain tarvittavan tilan */
+    display: inline-flex;
     padding: 10px 15px;
     gap: 12px;
   }
@@ -170,4 +198,65 @@
 
 @media (max-width: 480px) {
   .hero-name-text { font-size: 2.2rem !important; }
+}
+
+/* sähköpostin kopioimisen tyylit */
+
+.email-copy-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.email-copy-wrapper button.social-icon {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 171, 240, 0.3);
+  cursor: pointer;
+  padding: 0;
+  width: 55px;
+  height: 55px;
+  color: white;
+  font-family: inherit;
+}
+
+.email-copy-wrapper button.social-icon:hover {
+  background-color: rgba(0, 171, 240, 0.1);
+  border-color: #00abf0;
+  transform: translateY(-3px);
+}
+
+/* "Kopioitu!" ilmoitus */
+.copy-tooltip {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00abf0;
+  color: #080808;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+/* nuoli ilmoituksen alapuolella */
+.copy-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #00abf0 transparent transparent transparent;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  85% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }

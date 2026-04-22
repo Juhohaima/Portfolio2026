@@ -18,7 +18,6 @@ const Navbar = () => {
         } else {
             const element = document.getElementById(targetId);
             if (element) {
-                // Lasketaan navbarin korkeus, ettei se peitä otsikkoa
                 const offset = 80; 
                 const bodyRect = document.body.getBoundingClientRect().top;
                 const elementRect = element.getBoundingClientRect().top;

@@ -1,3 +1,5 @@
+// Reactbits komponentti. Tekee "Hei Olen Juho!"-tekstistä animaation, jossa teksti ilmestyy kirjaimittain alhaalta ylös, vasemmalta oikealle. Käytetään Hero.jsx:ssä.
+
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
