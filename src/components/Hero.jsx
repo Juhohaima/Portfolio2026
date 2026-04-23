@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="hero-main-flex">
           <div className="hero-left">
             <SplitText
-              text="Hei olen Juho!"
+              text="Hei, olen Juho!"
               className="hero-name-text !text-6xl" /* isompi teksti */
               delay={120}
               duration={0.8}
@@ -64,7 +64,7 @@ const Hero = () => {
 
             {/* cv nappi */}
             <div className="hero-actions">
-              <a href="https://drive.google.com/file/d/1GjGfRfItL8KEQ32kQllNRPYrQK_M-AuR/view?usp=sharing" target="_blank" rel="noreferrer" className="cv-button">
+              <a href="https://drive.google.com/file/d/1LID7-MuUnhgeYCNjyMlluJbqwDwHKz_U/view?usp=sharing" target="_blank" rel="noreferrer" className="cv-button">
                 <FontAwesomeIcon icon={faFile} /> Katso CV
               </a>
             </div>
