@@ -72,7 +72,7 @@ const Hero = () => {
 
         {/* pitempi teksti oikealla puolella */}
           <p className="hero-description">
-            Olen 17-vuotias opiskelija Oulusta. Opiskelen OSAO:lla Tieto- ja Viestintätekniikan perustutkintoa, ja tulen valmistumaan ohjelmistokehittäjäksi 2027.
+            Olen 17-vuotias opiskelija Oulusta. Opiskelen OSAO:lla Tieto- ja Viestintätekniikan perustutkintoa ja tulen valmistumaan ohjelmistokehittäjäksi 2027.
           </p>
         </div>
       </div>

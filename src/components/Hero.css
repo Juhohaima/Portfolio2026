@@ -130,7 +130,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08); /* ohut reuna */
 }
 
-/* teknonurkka oikeassa alanurkassa */
+/* "teknonurkka" oikeassa alanurkassa */
 .tech-stack-corner {
   position: absolute;
   bottom: 40px; /* väliä alareunaan */
@@ -146,7 +146,7 @@
 /* ikonien tyylitystä */
 .tech-lang { font-size: 2rem; } /* ikonin koko */
 
-/* Ikoneille omat värit */
+/* ikoneille omat värit */
 .html { color: #e34f26; } .css { color: #1572b6; } .js { color: #f7df1e; } .react { color: #61dafb; } .tailwind { color: #38bdf8; }
 
 /* Responsiivisuutta */
@@ -171,7 +171,7 @@
 
   .hero-intro { font-size: 1rem; }
 
-  /* SOME JA CV */
+  /* some ikonit ja cv */
   .hero-socials { gap: 10px; }
   .social-icon { width: 45px; height: 45px; font-size: 1.2rem; }
   .cv-button { padding: 12px 20px; font-size: 1rem; }

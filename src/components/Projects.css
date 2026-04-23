@@ -144,7 +144,7 @@
 }
 
 .project-top-text {
-  min-height: 120px; /* Pitää gridin suorassa, vaikka tekstien pituus vaihtelee */
+  min-height: 120px;
   padding: 0 5px;
 }
 
@@ -153,25 +153,21 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
-  /* Tehdään tekstistä hieman tyylikkäämpi pienellä sivuviivalla */
   border-left: 2px solid #00abf0;
   padding-left: 12px;
 }
 
-/* Varmistetaan että grid näyttää hyvältä näiden kanssa */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 50px; /* Hieman isompi väli, koska nyt on enemmän sisältöä */
+  gap: 50px;
   align-items: flex-start;
 }
 
-/* Lisää tai korvaa nämä Projects.css tiedostossa */
-
 .project-meta-wrapper {
   display: flex;
-  justify-content: space-between; /* Työntää tagit vasemmalle ja ikonit oikealle */
-  align-items: center; /* Pitää ne samalla korkeudella */
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -180,19 +176,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 0; /* Poistetaan marginaali, ettei se sotke pystysuuntaista keskitystä */
+  margin-bottom: 0;
 }
 
 .github-link-icon {
   color: #aaaaaa;
-  font-size: 1.8rem; /* Hieman isompi erottuvuuden vuoksi */
+  font-size: 1.8rem;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  padding-left: 15px; /* Pieni hajurako tageihin */
+  padding-left: 15px;
 }
 
 .github-link-icon:hover {
   color: #00abf0;
-  transform: translateY(-2px); /* Pieni noste hoverissa */
+  transform: translateY(-2px);
 }

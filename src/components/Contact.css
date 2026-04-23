@@ -8,7 +8,7 @@
   border-top: 1px solid rgba(0, 171, 240, 0.2); /* tosi ohut viiva Contact.jsx osion aivan ylhäällä */
 }
 
-/* Google Gemini Ai:n tekemä; taustalla hehkuva sininen valopallo efekti */
+/* hehkuva sininen taustaefekti */
 .contact-glow {
   position: absolute;
   top: 50%;
@@ -116,7 +116,6 @@
   min-height: 200px;
 }
 
-
 .success-text {
   color: #00abf0;
   font-size: 1.2rem;
@@ -137,7 +136,6 @@
   align-items: stretch;
 }
 
-/* Varmistetaan, että lomake itsessään täyttää tilan */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -145,12 +143,11 @@
   width: 100%; 
 }
 
-/* Keskitetään vain tekstit ja lähetysnappi erikseen */
 .contact-title, 
 .contact-subtitle,
 .success-container {
   text-align: center;
-  align-self: center; /* Keskittää nämä elementit wrapperin sisällä */
+  align-self: center;
 }
 
 .submit-btn {
