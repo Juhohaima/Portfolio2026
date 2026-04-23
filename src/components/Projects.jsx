@@ -28,7 +28,7 @@ const Projects = () => {
       description: "Ensimmäinen ohjelmoinninharjoitustyö. Toteutin maalauspalveluyritykselle sivuston, jossa oli kuvia tehdyistä maalaustöistä, sekä osio jossa eri maaleja pystyi kokeilemaan kuvan taustalle. On hienoa nähdä oma edistys ohjelmistokehittäjänä",
       tech: ["HTML", "CSS", "JS"],
       image: "/kotkantienmaalaus.png",
-      live: "https://geronimo.okol.org/~haijuh/",
+      live: "https://geronimo.okol.org/~haijuh/Selainohjelmointi%20N%C3%A4ytt%C3%B6ty%C3%B6/",
       github: "https://github.com/Juhohaima/Kotkantienmaalaus"
     }
   ];
