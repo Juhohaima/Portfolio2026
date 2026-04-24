@@ -13,7 +13,7 @@ const Projects = () => {
       tech: ["PHP", "SQL", "Backend"],
       image: "/musiikkitapahtumatyo.png",
       live: "https://geronimo.okol.org/~haijuh/musiikkitapahtuma",
-      github: "https://github.com/Juhohaima/bandnight"
+      github: "https://github.com/Juhohaima/phpnaytto"
     },
     {
       title: "Op Pankkilomake",
